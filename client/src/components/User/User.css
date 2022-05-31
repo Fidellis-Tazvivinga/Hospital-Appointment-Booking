@@ -1,0 +1,499 @@
+.user__header {
+
+    padding-top: 8px !important;
+    display: flex;
+
+    line-height: 0 !important;
+    height: 64px;
+    padding: 0px 20px !important;
+    background-color: #fff !important;
+
+}
+
+
+.user__header__container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.user__header__logo {
+    flex: 4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo__container {
+    padding: 4px;
+    padding-bottom: 4px;
+    border-radius: 50%;
+
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.logo__container img {
+    background-repeat: no-repeat;
+    object-fit: fill;
+    background-size: contain;
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+}
+
+.user__header__logo__head {
+    width: 160px;
+    height: 42px;
+    z-index: 1;
+
+    margin-top: 8px;
+    margin-left: 5rem !important;
+}
+
+.user__header__search {
+    flex: 10;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    width: 60%;
+}
+
+
+.user__header__search__input {
+
+    width: 100%;
+}
+
+.user__header__search__input input {
+    color: rgba(0, 0, 0, 0.65);
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid gray;
+}
+
+/* Main */
+
+.user__main {
+    background-color: rgb(247, 241, 241);
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.user__main__container {
+    padding: 30px;
+
+}
+
+/* main content */
+.user__main__content {
+    background-color: white;
+    margin-top: 25px;
+}
+
+.user__main__content__container {
+    padding: 20px;
+    display: flex;
+}
+
+.user__content__left {
+    flex: 0.33;
+}
+
+.user__content__right {
+    flex: 0.67;
+    margin-left: 25px;
+}
+
+.user__content__left__card {
+
+
+    display: flex;
+    padding: 23px;
+    padding-bottom: 40px;
+    margin-bottom: 15px;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #707070;
+    box-shadow: 0 0 4px #6c6c6c !important;
+}
+
+
+.user__content__left__card__one {
+    background: #444444 !important;
+
+}
+
+.user__content__left__card__one:hover {
+    background: #141414 !important;
+
+}
+
+.user__content__left__card__two {
+    background: #358481 !important;
+
+}
+
+.user__content__left__card__two:hover {
+    background: #036b68 !important;
+
+}
+
+.user__content__left__card__three {
+    background: #A7161A !important;
+
+}
+
+.user__content__left__card__three:hover {
+    background: #4b0204 !important;
+
+}
+
+.user__content__left__card__icon {
+    margin-right: 10px;
+}
+
+
+.user__content__left__card__text h3 {
+
+    font-size: 1rem !important;
+    margin-bottom: 3px !important;
+    color: white;
+    font-weight: 600;
+}
+
+.user__content__left__card__text h5 {
+
+    font-size: 0.8rem !important;
+    color: #fff !important;
+    opacity: 0.7 !important;
+    font-weight: 400;
+}
+
+
+
+
+.user__content__right {
+    text-align: center;
+    align-items: center;
+}
+
+.appointments__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px !important;
+    align-items: center;
+}
+
+.appointments img {
+    font-size: 6rem;
+    width: 1em;
+    height: 1em;
+}
+
+.appointments {
+    margin-bottom: 8px;
+}
+
+.appointments__container h3 {
+    font-size: 1.4em;
+}
+
+/* prev appointments */
+.prev__appointment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prev__date {
+    background-color: rgb(11, 186, 240);
+    padding: 5px;
+    color: white;
+    border-radius: 20px;
+}
+
+.prev__icon__content p {
+    margin-left: 5px;
+    align-self: center;
+    padding-bottom: 5px;
+    margin-bottom: -3px;
+    text-align: center;
+    align-content: center;
+}
+
+.prev__tag__two p {
+    font-size: 12px;
+    color: #358481;
+    font-weight: 600;
+    padding-bottom: 0px;
+    margin-left: 8px;
+}
+
+.prev__icon__content {
+    display: flex;
+    align-items: center;
+}
+
+/* Modals */
+.vaccines__list ul li {
+    color: #CC0033;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.vaccines__btns button {
+    background-color: #CC0033;
+    color: white;
+    text-align: center;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 15px 0px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+
+/* vaccHopsital */
+.vaccines h5 {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.vaccines p {
+    padding: 10px 15px;
+}
+
+.vaccines button {
+    background-color: #CC0033;
+    color: white;
+    text-align: center;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 15px 0px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.vaccines .vaccClinic {
+    background-color: #75C4C1;
+
+}
+
+/* vaccSearchHosp */
+.vaccinesHospSearch {
+    padding: 10px 20px;
+}
+
+
+
+.required {
+    display: flex;
+    margin: 10px 0px;
+    justify-content: flex-end;
+}
+
+.vaccSearchHosp__div {
+    margin-bottom: 15px;
+}
+
+.vaccSearchHosp__div label {
+    font-weight: 600;
+}
+
+.submit__btn button {
+    border: none;
+    outline: none;
+    background-color: #CC0033;
+    padding: 5px 16px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.submit__btn>button>.search__icon {
+
+    margin-right: 5px;
+}
+
+/* search list */
+
+.user__search__header {
+    display: flex;
+    align-items: center;
+
+}
+
+.user__search__header a {
+    font-size: 20px;
+    margin-right: 10px;
+    color: black;
+    margin-bottom: 20px;
+
+}
+
+.user__search__header a:hover {
+    color: #0c86eb;
+
+
+}
+
+.user__search__header h2 {
+    font-size: 23px;
+    align-self: center;
+
+}
+
+.user__search {
+    background-color: rgb(247, 241, 241);
+    border-radius: 10px;
+    padding: 30px;
+    overflow-y: scroll;
+}
+
+.user__search__container {
+
+    background-color: white;
+    min-height: 70vh;
+    height: auto;
+    padding: 30px;
+
+}
+
+/* searhc list  */
+
+.search__hospital {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+
+}
+
+.search__item .star {
+    font-size: 24px;
+
+}
+
+.doctor h6 {
+
+    font-size: 16px;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    align-self: center;
+}
+
+.search__item {
+    display: flex;
+    align-items: center;
+
+}
+
+.search__item p {
+    margin-left: 5px;
+    align-self: center;
+    padding-bottom: 5px;
+    margin-bottom: -3px;
+    text-align: center;
+    align-content: center;
+    font-size: 16px;
+}
+
+.search__hospital__one {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.search__hospital__one h5 {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.search__hospital__one h6 {
+    background-color: rgb(0, 119, 255);
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: white;
+}
+
+/* make hospital appointmetn */
+.select__search__type h5 {
+    text-align: center;
+    font-weight: 600;
+}
+
+.select__search__links button {
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+    margin: 8px 0px;
+    padding: 15px 8px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    border: none;
+    outline: none;
+}
+
+.select__search__link__one {
+    background-color: #CC0033;
+
+}
+
+.select__search__link__two {
+    background-color: #0c86eb;
+}
+
+/* td {
+    border: 1px solid #dddddd;
+
+}
+} */
+.appointment__table thead {
+    background-color: none !important;
+    display: none;
+}
+
+.appointment__table td:nth-child(1) {
+    background-color: rgb(221, 217, 217);
+}
+
+/* booked */
+.booked__alerts {
+    border-radius: 20px !important;
+}
+
+.booked__alerts__container {
+    margin: 10px;
+    padding: 30px;
+}
+
+.booked__alerts__container .ant-alert {
+    margin-bottom: 10px;
+}

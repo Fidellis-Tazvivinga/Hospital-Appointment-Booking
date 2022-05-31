@@ -1,0 +1,218 @@
+/* home */
+
+.home {
+    display: flex;
+}
+
+.home .homeContainer {
+    flex: 6;
+}
+
+.home .homeContainer .widgets,
+.home .homeContainer .charts {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+.home .homeContainer .charts {
+    padding: 5px 20px;
+}
+
+.home .homeContainer .listContainer {
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    padding: 20px;
+    margin: 20px;
+}
+
+.home .homeContainer .listContainer .listTitle {
+    font-weight: 500;
+    color: gray;
+    margin-bottom: 15px;
+}
+
+/* widget */
+.widget {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding: 10px;
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    border-radius: 10px;
+    height: 100px;
+}
+
+.widget .left,
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.widget .title {
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(160, 160, 160);
+}
+
+.counter {
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.link {
+    width: max-content;
+    font-size: 12px;
+    border-bottom: 1px solid gray;
+}
+
+.percentage {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.percentage .positive {
+    color: green;
+}
+
+.percentage .negative {
+    color: red;
+}
+
+
+.icon {
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+    align-self: flex-end;
+}
+
+/* featured */
+
+.featured {
+    flex: 2;
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    padding: 10px;
+}
+
+.featured .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: gray;
+}
+
+.featured .top .title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.featured .bottom {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.featured .bottom .featuredChart {
+    width: 100px;
+    height: 100px;
+}
+
+.featured .bottom .title {
+    font-weight: 500;
+    color: gray;
+}
+
+.featured .bottom .amount {
+    font-size: 30px;
+}
+
+.featured .bottom .desc {
+    font-weight: 300;
+    font-size: 12px;
+    color: gray;
+    text-align: center;
+}
+
+.featured .bottom .summary {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.featured .bottom .summary .item {
+    text-align: center;
+}
+
+.featured .bottom .summary .item .itemTitle {
+    font-size: 14px;
+    color: gray;
+}
+
+.featured .bottom .summary .item .itemResult {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.featured .bottom .summary .item .itemResult.positive {
+    color: green;
+}
+
+.featured .bottom .summary .item .itemResult.negative {
+    color: red;
+}
+
+
+/* table */
+.table .cellWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.table .cellWrapper .image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.table .status {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.table .status.Approved {
+    color: green;
+    background-color: rgba(0, 128, 0, 0.151);
+}
+
+.table .status.Pending {
+    color: goldenrod;
+    background-color: rgba(189, 189, 3, 0.103);
+}
+
+
+/* chart */
+.chart {
+    flex: 4;
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    padding: 10px;
+    color: gray;
+}
+
+.chart .title {
+    margin-bottom: 20px;
+}
+
+.chart .chartGrid {
+    stroke: #e4e1e1;
+}

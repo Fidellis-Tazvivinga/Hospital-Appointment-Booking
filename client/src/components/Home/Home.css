@@ -1,0 +1,91 @@
+.home__banner {
+  height: 85vh;
+}
+
+.home__banner__container {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+  position: relative;
+}
+
+.home__banner__container:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(36, 35, 35, 0.5);
+}
+
+.home__banner__container h3 {
+  color: white;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.home__banner__container p {
+  max-width: 500px;
+  text-align: center;
+  z-index: 2;
+}
+
+.home__banner__icons {
+  height: 100px;
+  background-color: #f5f5f5;
+  border-bottom: 2px solid #ebebeb;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 13vh;
+  margin-bottom: 20px;
+}
+
+.home__banner__icon i {
+  color: #45c3d2;
+  font-size: 24px;
+}
+
+
+/* why us  */
+.whyus {
+  margin: 90px 0px;
+}
+
+.whyus .whyus__section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 340px;
+  background-color: #fff;
+  max-width: 80%;
+  margin: auto;
+}
+
+.whyus__list {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.whyus__list img {
+  width: 130px;
+
+}
+
+.whyus__list h4 {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.whyus__list p {
+  font-size: 12px;
+
+}

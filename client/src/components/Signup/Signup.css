@@ -1,0 +1,16 @@
+.signup-container {
+    background: rgb(50, 55, 56);
+}
+
+.fa {
+    height: 25px;
+}
+
+.btn__register {
+    background-color: rgb(0, 26, 255);
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+}

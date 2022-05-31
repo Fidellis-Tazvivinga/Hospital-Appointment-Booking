@@ -1,0 +1,57 @@
+.btn {
+    background-color: white;
+}
+
+.btn-selected {
+    background-color: blue;
+}
+
+.btn-schedule {
+    border: 1px solid #ccc;
+}
+
+.btn-schedule:hover {
+    border: #ccc;
+}
+
+.btn-css {
+    border-radius: 3px;
+    height: 38px;
+    padding: 6px 12px;
+    background-color: #2a96a5;
+}
+
+.doctor-schedule .doctor-time {
+    font-size: 80%;
+    border-radius: 5px;
+    background-color: #ccc;
+    padding: 5px;
+    margin: 20px 10px 10px 0;
+    height: 32px;
+    width: 110px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+.btn__add {
+    background-color: turquoise;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn__big {
+    padding: 20px;
+    border-radius: 17px;
+    margin: auto;
+
+    font-weight: 600;
+}
+
+
+
+.schedules__table__date {
+    min-width: 100px;
+}

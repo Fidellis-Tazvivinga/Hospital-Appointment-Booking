@@ -1,0 +1,51 @@
+.home__header {
+    display: flex;
+    justify-content: space-between;
+    height: 11vh;
+    align-items: center;
+    background-color: white !important;
+}
+
+.home__header__left {
+    display: flex;
+}
+
+.home__header__left__img img {
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: contain;
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+    margin-left: 2vw;
+}
+
+.home__header__left__head {
+    width: 165px;
+    height: 50px;
+    z-index: 1;
+
+    margin-top: 8px;
+    margin-left: 1.7rem !important;
+}
+
+.home__header__right {
+    display: flex;
+    margin-right: 10px;
+
+}
+
+.nav-link {
+    color: black;
+    font-size: 16px;
+
+}
+
+.nav-link .anticon {
+    vertical-align: 0 !important;
+}
+
+.nav-link .nav-link__text {
+    margin-left: 0.4rem;
+    font-size: 15px;
+}
