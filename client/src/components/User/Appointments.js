@@ -1,18 +1,23 @@
-import React from 'react'
+import React, { useRef } from 'react';
 import { TagOutlined, SubnodeOutlined, NodeIndexOutlined, MedicineBoxOutlined, PrinterOutlined, DeleteFilled } from "@ant-design/icons"
 import "./User.css"
 import { Button } from "antd"
 import { deleteAppointmentApi } from '../../api/appointment'
 import moment from "moment"
+import ReactToPrint from 'react-to-print';
+
+import Print from '../utils/Print';
 
 const Appointments = ({ appointmentsList, handleCancelAppointment, appointmentStatus, doctor, appointmentPlace, policlinic, date }) => {
 
 
-
+    const componentRef = useRef();
 
 
     return (
         <>
+
+
             {
                 appointmentsList && appointmentsList.map((appoint) => {
                     return appoint.appointmentStatus == "Active" && (
@@ -62,7 +67,14 @@ const Appointments = ({ appointmentsList, handleCancelAppointment, appointmentSt
 
                                 <div className="delete__icon">
                                     <DeleteFilled onClick={() => handleCancelAppointment(appoint._id)} />
-                                    <PrinterOutlined />
+                                    <div>
+                                        <ReactToPrint
+                                            trigger={() => <PrinterOutlined />}
+                                            content={() => componentRef.current}
+                                        />
+                                        <Print ref={componentRef} appoint={appoint} />
+                                    </div>
+
                                     {/*                                     <Button type="primary" onClick={() => handleCancelAppointment(appoint._id)}>Cancel</Button>
  */}                                </div>
                             </div>
