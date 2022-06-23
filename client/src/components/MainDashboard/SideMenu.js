@@ -181,7 +181,7 @@ const SideMenu = ({ collpsd }) => {
             )}
 
 
-            {(auth?.user.role == 3 || authDoctor?.doctor) && (
+            {(authDoctor?.doctor) && (
 
 
                 <>
@@ -211,6 +211,47 @@ const SideMenu = ({ collpsd }) => {
                         paddingBottom: "20px"
                     }} >
                         <Link to="/doctor/patients">Patients</Link>
+                    </Menu.Item>
+                    <Menu.Item key="10" icon={<BarChartOutlined />} style={{
+                        paddingBottom: "20px"
+                    }} >
+                        <Link to="/all/statistics">Statistical</Link>
+                    </Menu.Item>
+                    <hr color='gray' />
+                </>
+
+            )
+            }
+            {(auth?.user.role == 3) && (
+
+
+                <>
+
+                    <p style={{
+                        marginLeft: "15px", fontWeight: "700", paddingBottom: "10px"
+                    }} >Doctors</p>
+                    <hr color='gray' />
+
+                    <Menu.Item key="8" icon={<ScheduleOutlined />} style={{
+                        paddingBottom: "20px"
+                    }} >
+                        <Link to="/admin/appointments">Appointments</Link>
+                    </Menu.Item>
+                    <Menu.Item key="8.1" icon={<ScheduleOutlined />} style={{
+                        paddingBottom: "20px"
+                    }} >
+                        <Link to="/admin/appointments/calendar">Calendar</Link>
+                    </Menu.Item>
+
+                    <Menu.Item key="9" icon={<FieldTimeOutlined />} style={{
+                        paddingBottom: "20px"
+                    }} >
+                        <Link to="/admin/schedules">Schedules</Link>
+                    </Menu.Item>
+                    <Menu.Item key="10" icon={<UsergroupAddOutlined />} style={{
+                        paddingBottom: "20px"
+                    }} >
+                        <Link to="/admin/patients">Patients</Link>
                     </Menu.Item>
                     <Menu.Item key="10" icon={<BarChartOutlined />} style={{
                         paddingBottom: "20px"

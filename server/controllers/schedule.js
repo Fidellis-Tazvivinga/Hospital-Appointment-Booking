@@ -33,6 +33,8 @@ exports.create = async (req, res) => {
     }
 };
 
+//create a weekly schedule for all doctors 
+
 
 exports.list = async (req, res) => {
     try {

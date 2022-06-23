@@ -6,57 +6,58 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-
+import { UserOutlined } from "@ant-design/icons"
+import { Avatar } from 'antd';
 const List = () => {
   const rows = [
     {
       id: 1143155,
-      product: "Acer Nitro 5",
-      img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "John Smith",
+      doctor: "Dr Fidellis",
+      img: "https://picsum.photos/200",
+      specialization: "Cardiology",
       date: "1 March",
-      amount: 785,
-      method: "Cash on Delivery",
+      time: "7:10",
+      place: "Harare Hospital",
       status: "Approved",
     },
     {
       id: 2235235,
-      product: "Playstation 5",
+      doctor: "Dr Fidellis",
       img: "https://m.media-amazon.com/images/I/31JaiPXYI8L._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "Michael Doe",
+      specialization: "Cardiology",
       date: "1 March",
-      amount: 900,
-      method: "Online Payment",
+      time: "9:00",
+      place: "Harare Hospital",
       status: "Pending",
     },
     {
       id: 2342353,
-      product: "Redragon S101",
+      doctor: "Dr Fidellis",
       img: "https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "John Smith",
+      specialization: "Cardiology",
       date: "1 March",
-      amount: 35,
-      method: "Cash on Delivery",
+      time: "3:50",
+      place: "Harare Hospital",
       status: "Pending",
     },
     {
       id: 2357741,
-      product: "Razer Blade 15",
+      doctor: "Dr Fidellis",
       img: "https://m.media-amazon.com/images/I/71wF7YDIQkL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "Jane Smith",
+      specialization: "Cardiology",
       date: "1 March",
-      amount: 920,
-      method: "Online",
+      time: "9:20",
+      place: "Harare Hospital",
       status: "Approved",
     },
     {
       id: 2342355,
-      product: "ASUS ROG Strix",
+      doctor: "Dr Fidellis",
       img: "https://m.media-amazon.com/images/I/81hH5vK-MCL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "Harold Carol",
+      specialization: "Cardiology",
       date: "1 March",
-      amount: 2000,
-      method: "Online",
+      time: "2:00",
+      place: "Harare Hospital",
       status: "Pending",
     },
   ];
@@ -66,11 +67,11 @@ const List = () => {
         <TableHead>
           <TableRow>
             <TableCell className="tableCell">Tracking ID</TableCell>
-            <TableCell className="tableCell">Product</TableCell>
-            <TableCell className="tableCell">Customer</TableCell>
+            <TableCell className="tableCell">Doctor</TableCell>
+            <TableCell className="tableCell">Specialization</TableCell>
             <TableCell className="tableCell">Date</TableCell>
-            <TableCell className="tableCell">Number</TableCell>
-            <TableCell className="tableCell">Payment Method</TableCell>
+            <TableCell className="tableCell">Time</TableCell>
+            <TableCell className="tableCell">Place</TableCell>
             <TableCell className="tableCell">Status</TableCell>
           </TableRow>
         </TableHead>
@@ -80,14 +81,16 @@ const List = () => {
               <TableCell className="tableCell">{row.id}</TableCell>
               <TableCell className="tableCell">
                 <div className="cellWrapper">
-                  <img src={row.img} alt="" className="image" />
-                  {row.product}
+                  {/* <img src={row.img} alt="" className="image" /> */}
+                  <Avatar size="large" icon={<UserOutlined />} />
+
+                  <span style={{ marginLeft: "5px" }}>{row.doctor}</span>
                 </div>
               </TableCell>
-              <TableCell className="tableCell">{row.customer}</TableCell>
+              <TableCell className="tableCell">{row.specialization}</TableCell>
               <TableCell className="tableCell">{row.date}</TableCell>
-              <TableCell className="tableCell">{row.amount}</TableCell>
-              <TableCell className="tableCell">{row.method}</TableCell>
+              <TableCell className="tableCell">{row.time}</TableCell>
+              <TableCell className="tableCell">{row.place}</TableCell>
               <TableCell className="tableCell">
                 <span className={`status ${row.status}`}>{row.status}</span>
               </TableCell>

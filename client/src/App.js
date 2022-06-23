@@ -60,7 +60,20 @@ import AdminDashboardHCRM from "./HCRM/AdminDashboard"
 import DoctorCalendar from "./components/Doctor/components/DoctorCalendar";
 import ScheduleTest from "./components/User/Modals/Hospitals/ScheduleTest";
 import DoctorPatients from "./components/Doctor/Patients";
+import AdminAppointments from "./components/Admin/Appointments/Appointments"
 const App = () => {
+
+
+  /*   const { auth,authDoctor } = useSelector((state) => ({ ...state }));
+  
+  let path
+  
+  if(auth.user?.role == 3){
+    path = "admin"
+  }else if(auth.authDoctor?.doctor ){
+    path = "doctor"
+  } */
+
   return (
     <BrowserRouter>
       {/*   {location.pathname !== '/doctor/dashboard' || '/customerservice/dashboard' &&       <Header /> }
@@ -138,6 +151,7 @@ const App = () => {
           <Route exact path="/admin/supporter/:supporterId" element={<EditSupporter />} />
           <Route exact path="/admin/clinic/:clinicId" element={<EditClinic />} />
           <Route exact path="/admin/hospital/:hospitalId" element={<EditHospital />} />
+          <Route exact path="/admin/appointments" element={<AdminAppointments />} />
 
 
           <Route element={<Notfound />} />

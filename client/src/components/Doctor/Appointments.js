@@ -120,16 +120,7 @@ const Appointments = () => {
                 name: "Appointment Owner",
                 details: appointment.appointmentOwner.username,
             },
-            {
-                key: "9",
-                name: "Appointment Owner",
-                details: appointment.appointmentOwner.username,
-            },
-            {
-                key: "10.4",
-                name: "Appointment Owner",
-                details: appointment.appointmentOwner.username,
-            },
+
 
 
 

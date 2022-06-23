@@ -6,7 +6,7 @@ import { deleteAppointmentApi } from '../../api/appointment'
 import moment from "moment"
 import ReactToPrint from 'react-to-print';
 
-import Print from '../utils/Print';
+import { Print } from '../utils/Print';
 
 const Appointments = ({ appointmentsList, handleCancelAppointment, appointmentStatus, doctor, appointmentPlace, policlinic, date }) => {
 
@@ -67,12 +67,14 @@ const Appointments = ({ appointmentsList, handleCancelAppointment, appointmentSt
 
                                 <div className="delete__icon">
                                     <DeleteFilled onClick={() => handleCancelAppointment(appoint._id)} />
+                                    {/* <PrinterOutlined /> */}
                                     <div>
                                         <ReactToPrint
                                             trigger={() => <PrinterOutlined />}
                                             content={() => componentRef.current}
                                         />
-                                        <Print ref={componentRef} appoint={appoint} />
+                                        <div style={{ display: "none" }}> <Print ref={componentRef} appoint={appoint} /></div>
+
                                     </div>
 
                                     {/*                                     <Button type="primary" onClick={() => handleCancelAppointment(appoint._id)}>Cancel</Button>
