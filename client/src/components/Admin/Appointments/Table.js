@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 //import "./Helpers.css";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -8,6 +9,8 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { UserOutlined } from "@ant-design/icons"
 import { Avatar } from 'antd';
+import { getAllAppointmentsApi } from "../../../api/appointment"
+import "./Table.css"
 const List = () => {
     const rows = [
         {
@@ -61,6 +64,23 @@ const List = () => {
             status: "Pending",
         },
     ];
+
+    const [appointments, setAppointments] = useState()
+    useEffect(() => {
+        allAppointments()
+    }, [])
+
+
+    const allAppointments = () => {
+        getAllAppointmentsApi()
+            .then((res) => {
+                setAppointments(res.data.appointments)
+
+            })
+            .catch(() => {
+                alert("Could not get appointments")
+            })
+    }
     return (
         <TableContainer component={Paper} className="table">
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -76,23 +96,29 @@ const List = () => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {rows.map((row) => (
-                        <TableRow key={row.id}>
-                            <TableCell className="tableCell">{row.id}</TableCell>
+                    {appointments && appointments.map((appointment) => (
+                        <TableRow key={appointment._id}>
+                            <TableCell className="tableCell">{appointment?._id}</TableCell>
                             <TableCell className="tableCell">
                                 <div className="cellWrapper">
                                     {/* <img src={row.img} alt="" className="image" /> */}
                                     <Avatar size="large" icon={<UserOutlined />} />
 
-                                    <span style={{ marginLeft: "5px" }}>{row.doctor}</span>
+                                    <span style={{ marginLeft: "5px" }}>{appointment?.doctor.name}</span>
                                 </div>
                             </TableCell>
-                            <TableCell className="tableCell">{row.specialization}</TableCell>
-                            <TableCell className="tableCell">{row.date}</TableCell>
-                            <TableCell className="tableCell">{row.time}</TableCell>
-                            <TableCell className="tableCell">{row.place}</TableCell>
+                            <TableCell className="tableCell">{appointment?.nameOfPoliclinic}</TableCell>
+                            <TableCell className="tableCell">{appointment?.appointmentDate}</TableCell>
+                            <TableCell className="tableCell">{appointment?.appointmentTime}</TableCell>
+                            <TableCell className="tableCell">{appointment?.hospital.hospitalName}</TableCell>
                             <TableCell className="tableCell">
-                                <span className={`status ${row.status}`}>{row.status}</span>
+                                <select name="cars" id="cars" className={`status ${appointment.appointmentStatus}`} >
+                                    <option value={appointment.appointmentStatus}>{appointment.appointmentStatus}</option>
+                                    <option value="Confirmed">Confirmed</option>
+                                    <option value="Attended">Attended</option>
+                                    <option value="Cancelled">Cancelled</option>
+                                    <option value="Delete">Delete</option>
+                                </select>
                             </TableCell>
                         </TableRow>
                     ))}

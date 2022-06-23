@@ -12,6 +12,11 @@ export const createAppointment = async (token, data) => {
 
     return response;
 };
+export const getAllAppointmentsApi = async () => {
+    const response = await axios.get(`${process.env.REACT_APP_API}/appointment/list`);
+
+    return response;
+};
 export const getAppointmentsApi = async (userId) => {
     const response = await axios.get(`${process.env.REACT_APP_API}/appointment/list/${userId}`);
 

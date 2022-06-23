@@ -85,6 +85,26 @@ exports.create = async (req, res) => {
 };
 
 
+exports.getAll = async (req, res) => {
+    const userId = req.params.userId
+    console.log(userId);
+    try {
+        const appointments = await Appointment.find({})
+            .populate("hospital", "hospitalName")
+            .populate("clinic", "clinicName")
+            .populate("doctor", "name")
+
+            .exec()
+        console.log("current availabke appointments", appointments)
+
+        res.json({ appointments });
+    } catch (err) {
+        console.log(err, 'appointments.readAll error');
+        res.status(500).json({
+            errorMessage: 'Please try again later',
+        });
+    }
+};
 exports.list = async (req, res) => {
     const userId = req.params.userId
     console.log(userId);
