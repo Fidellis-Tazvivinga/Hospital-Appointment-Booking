@@ -9,7 +9,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { UserOutlined } from "@ant-design/icons"
 import { Avatar } from 'antd';
-import { getAllAppointmentsApi } from "../../../api/appointment"
+import { getAllAppointmentsApi, editAppointmentApi, deleteAppointmentApi } from "../../../api/appointment"
 import "./Table.css"
 const List = () => {
     const rows = [
@@ -65,6 +65,7 @@ const List = () => {
         },
     ];
 
+    const [initialAppointStatus, setInitialAppointStatus] = useState()
     const [appointments, setAppointments] = useState()
     useEffect(() => {
         allAppointments()
@@ -81,6 +82,25 @@ const List = () => {
                 alert("Could not get appointments")
             })
     }
+
+    const handleStatusChange = (e, id) => {
+        console.log(e.target.value);
+
+        if (e.target.value == "Delete") {
+            deleteAppointmentApi(id)
+        }
+        const status = { appointmentStatus: e.target.value }
+        editAppointmentApi(id, status)
+            .then((res) => {
+                setAppointments(res.data.appointments)
+                allAppointments()
+            })
+            .catch(() => {
+                alert("Could not get appointments")
+            })
+    }
+
+
     return (
         <TableContainer component={Paper} className="table">
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -112,7 +132,7 @@ const List = () => {
                             <TableCell className="tableCell">{appointment?.appointmentTime}</TableCell>
                             <TableCell className="tableCell">{appointment?.hospital.hospitalName}</TableCell>
                             <TableCell className="tableCell">
-                                <select name="cars" id="cars" className={`status ${appointment.appointmentStatus}`} >
+                                <select name="cars" id="cars" defaultValue={appointment.appointmentStatus} className={`status ${appointment.appointmentStatus}`} onChange={(e) => handleStatusChange(e, appointment?._id)} >
                                     <option value={appointment.appointmentStatus}>{appointment.appointmentStatus}</option>
                                     <option value="Confirmed">Confirmed</option>
                                     <option value="Attended">Attended</option>

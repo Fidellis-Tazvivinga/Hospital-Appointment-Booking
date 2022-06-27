@@ -163,17 +163,17 @@ exports.read = async (req, res) => {
 
 
 exports.update = async (req, res) => {
-    /*    try {
-              const specializationId = req.params.specializationId;
-              const specialization = await Schedule.findByIdAndUpdate(specializationId, req.body)
-      
-              res.json({ successMessage: `${specialization.name} was successfully edited` });
-          } catch (err) {
-              console.log(err, 'specializationController.readAll error');
-              res.status(500).json({
-                  errorMessage: 'Please try again later',
-              });
-          }  */
+    try {
+        const appointmentId = req.params.appointmentId;
+        const appointment = await Appointment.findByIdAndUpdate(appointmentId, req.body)
+
+        res.json({ successMessage: `appointment was successfully edited` });
+    } catch (err) {
+        console.log(err, 'specializationController.readAll error');
+        res.status(500).json({
+            errorMessage: 'Please try again later',
+        });
+    }
 };
 
 exports.confirm = async (req, res) => {

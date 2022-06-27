@@ -16,6 +16,10 @@
     border-radius: 5px;
 }
 
+.table .status option {
+    margin: 5px 3px;
+}
+
 .table .status.Active {
     color: green;
     background-color: rgba(0, 128, 0, 0.151);
